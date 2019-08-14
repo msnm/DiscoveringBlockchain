@@ -46,23 +46,25 @@ contract Hospital {
     }
     
     //Enkel de patiënt zelf kan zijn algemene gegevens
-    function updatePatient(string firstName, string lastName, string foodPreference, uint birthDate) restrictedToPatient public returns (bool success) {
+    function updatePatient(string firstName, string lastName, string foodPreference, uint birthDate) restrictedToPatient public returns (uint) {
         address patientAddress  = msg.sender; 
         patientStructs[patientAddress].firstName = firstName; 
         patientStructs[patientAddress].lastName = lastName; 
         patientStructs[patientAddress].foodPreference = foodPreference;
         patientStructs[patientAddress].birthDate = birthDate;
         patientStructs[patientAddress].id = patientIds.push(msg.sender) - 1; //push geeft de lengte van de array terug. En we willen de index achterhalen waar in de array het address wordt opgeslagen. 
-        return true; //success
+        emit PatientEvent(patientStructs[patientAddress].id, patientStructs[patientAddress].firstName, patientStructs[patientAddress].lastName,  patientStructs[patientAddress].foodPreference,  patientStructs[patientAddress].birthDate);
+        return patientStructs[patientAddress].id; //success
     }
     
     //Bij ziekenhuisopname moet neergeschreven worden waarom en wanneer de patient wordt opgenomen en wanneer deze vermoedelijk naar huis mag!
-    function insertHospitalization(address patientAddress, uint admissionDate, string reason, uint plannedResignation) restrictedToNurse public returns (bool success) {
+    function insertHospitalization(address patientAddress, uint admissionDate, string reason, uint plannedResignation) restrictedToNurse public returns (uint) {
         require(patientIds[patientStructs[patientAddress].id] == patientAddress);
         patientStructs[patientAddress].hospitalizationInfo.admissionDate = admissionDate; 
         patientStructs[patientAddress].hospitalizationInfo.reason = reason; 
         patientStructs[patientAddress].hospitalizationInfo.plannedResignation = plannedResignation; 
-        return true;
+        emit HospitalizationInfoEvent(patientStructs[patientAddress].id, patientStructs[patientAddress].hospitalizationInfo.admissionDate, patientStructs[patientAddress].hospitalizationInfo.reason, patientStructs[patientAddress].hospitalizationInfo.plannedResignation);
+        return patientStructs[patientAddress].id;
     }
     
     //Bij ziekenhuisopname moet neergeschreven worden waarom en wanneer de patient wordt opgenomen en wanneer deze vermoedelijk naar huis mag!
@@ -74,6 +76,7 @@ contract Hospital {
         patientStructs[patientAddress].treatmentStructs[id].description = description;
         patientStructs[patientAddress].treatmentStructs[id].date= date;
         patientStructs[patientAddress].treatmentStructs[id].status = status;
+        emit TreatmentEvent(patientStructs[patientAddress].id, patientStructs[patientAddress].treatmentStructs[id].id, patientStructs[patientAddress].treatmentStructs[id].typeOfTreatment, patientStructs[patientAddress].treatmentStructs[id].description, patientStructs[patientAddress].treatmentStructs[id].date, patientStructs[patientAddress].treatmentStructs[id].status);
         return id;
     }
     
@@ -94,6 +97,8 @@ contract Hospital {
         patientStructs[patientAddress].treatmentStructs[id].description = description;
         patientStructs[patientAddress].treatmentStructs[id].date= date;
         patientStructs[patientAddress].treatmentStructs[id].status = status;
+        
+        emit TreatmentEvent(patientStructs[patientAddress].id, patientStructs[patientAddress].treatmentStructs[id].id, patientStructs[patientAddress].treatmentStructs[id].typeOfTreatment, patientStructs[patientAddress].treatmentStructs[id].description, patientStructs[patientAddress].treatmentStructs[id].date, patientStructs[patientAddress].treatmentStructs[id].status);
         return true;
     }
 
@@ -134,6 +139,11 @@ contract Hospital {
         _;
     }
     
+    // Events
+    event PatientEvent(uint id, string firstName, string lastName, string foodPreference, uint birthDate);
+    event TreatmentEvent(uint patientId, uint treatmentId, string typeOfTreatment, string description, uint date, string status);
+    event HospitalizationInfoEvent(uint patientId, uint admissionDate, string reason, uint plannedResignation);
+    
     // Structs 
     struct Patient {
         //bool isPatient; //Nodig om te zien of een struct bestaat. 
@@ -161,3 +171,4 @@ contract Hospital {
         string status;
     }
 }
+
