@@ -1,0 +1,18 @@
+{
+  "name": "hospital",
+  "version": "1.0.0",
+  "description": "First DAPP",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 10000"
+  },
+  "author": "msnm",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "ganache-cli": "^6.5.1",
+    "mocha": "^6.2.0",
+    "solc": "^0.4.25",
+    "web3": "^1.2.1"
+  }
+}
