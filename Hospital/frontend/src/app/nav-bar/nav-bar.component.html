@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="/assets/images/uza.png" alt="logo of hospital" width="120" height="40">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/departments']">Afdelingen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/settings']">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="enableProvider()">Account: {{ethereumAddress}}</a>
+
+          <span></span>
+        </li>
+      </ul>
+      <div  class="form-inline">
+        <input  class="form-control mr-sm-2" type="text" placeholder="naam" aria-label="Zoek patiënt">
+        <button class="btn btn-outline my-2 my-sm-0" type="submit">Zoek patiënt</button>
+      </div>
+    </div>
+  </nav>
+</div>

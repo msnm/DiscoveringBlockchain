@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="row">
+    <div class="card col-md-8 offset-2">
+      <div class="container-fluid">
+        <div class="card-header">
+          <div class="row justify-content-between">
+            <h6> Huidige settings </h6>
+            <div class="col-md-1">
+              <button (click)="this.toggleForm()" class="btn"><i class="fa fa-sliders"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <form novalidate (ngSubmit)="saveSettings()" [formGroup]="settingsForm">
+            <div class="form-group row  mb-0">
+              <label class="col-md-4 col-form-label input-group-text">Kamernummer weergeven</label>
+              <div class="col-md-8 p-0">
+                <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" formControlName="roomNumber">
+                  <label ngbButtonLabel class="btn-primary">
+                    <input ngbButton type="radio" [value]="true"> Ja
+                  </label>
+                  <label ngbButtonLabel class="btn-primary">
+                    <input ngbButton type="radio" [value]="false"> Nee
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row  mb-0">
+              <label class="col-md-4 col-form-label input-group-text">Naam patiënt weergeven</label>
+              <div class="col-md-8 p-0">
+                <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" formControlName="namePatient">
+                  <label ngbButtonLabel class="btn-primary">
+                    <input ngbButton type="radio" [value]="true"> Ja
+                  </label>
+                  <label ngbButtonLabel class="btn-primary">
+                    <input ngbButton type="radio" [value]="false"> Nee
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row  mb-0">
+              <label class="col-md-4 col-form-label input-group-text">Behandeling weergeven</label>
+              <div class="col-md-8 p-0">
+                <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" formControlName="treatmentType">
+                  <label ngbButtonLabel class="btn-primary">
+                    <input ngbButton type="radio" [value]="true"> Ja
+                  </label>
+                  <label ngbButtonLabel class="btn-primary">
+                    <input ngbButton type="radio" [value]="false"> Nee
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row  mb-0">
+              <label class="col-md-4 col-form-label input-group-text">Faciliteiten tonen</label>
+              <div class="col-md-8 p-0">
+                <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" formControlName="icons">
+                  <label ngbButtonLabel class="btn-primary">
+                    <input ngbButton type="radio" [value]="true"> Ja
+                  </label>
+                  <label ngbButtonLabel class="btn-primary">
+                    <input ngbButton type="radio" [value]="false"> Nee
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="changeSettings" class="form-group row mb-2">
+              <div class="offset-md-2 col-md-4">
+                <button class="btn btn-primary mr-3"
+                        style="width:80px;"
+                        type="submit"
+                        [disabled]="!settingsForm.valid">
+                  Save
+                </button>
+                <button class="btn btn-outline-secondary mr-3"
+                        style="width:80px;"
+                        type="button"
+                        title="Cancel your edits"
+                        (click)="cancelSettings()">
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

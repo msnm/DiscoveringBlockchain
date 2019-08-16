@@ -1,0 +1,16 @@
+
+.card {
+  margin-top: 1rem;
+}
+.card-body {
+  background-color: #015ABD;
+}
+h5, a {
+  color: white;
+}
+.btn {
+  background-color: #EE374F;
+}
+
+
+

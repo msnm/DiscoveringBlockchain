@@ -1,0 +1,14 @@
+<div class="container-fluid mg-5">
+  <div class="row">
+    <div class="col">
+      <h3 class="text-center"> Dashboard {{department.name}}</h3>
+    </div>
+  </div>
+<div class="row">
+  <div class="card-deck">
+      <div *ngFor="let room of department.rooms" class="col-md-4">
+        <app-room [room]="room"></app-room>
+      </div>
+    </div>
+</div>
+</div>

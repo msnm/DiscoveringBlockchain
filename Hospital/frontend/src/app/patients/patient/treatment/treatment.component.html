@@ -1,0 +1,92 @@
+<div class="card">
+  <div class="card-header">
+    <div  *ngIf="!newTreatment" class="row justify-content-start">
+      <div class="col-md-1">{{treatment.status}}</div>
+      <div class="col-md-3">{{treatment.type}}</div>
+      <div class="col-md-3">{{treatment.dateOfTreatment | date: 'dd/MM/yyyy hh:mm'}} </div>
+      <div class="col-md-4">{{treatment.description}}</div>
+      <div class="col-md-1">
+        <button (click)="this.toggleForm()" class="btn"><i class="fa fa-sliders"></i></button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="this.openForm" class="card-body">
+    <form novalidate (ngSubmit)="saveTreatment()" [formGroup]="treatmentForm">
+      <div class="form-group row  mb-0">
+        <label class="col-md-2 col-form-label input-group-text" for="treatmentTypeId">Behandeling</label>
+        <div class="col-md-8 p-0">
+          <select class="form-control bg-white" id="treatmentTypeId" formControlName="type"
+                  [ngClass]="{'is-invalid': !treatmentForm.get('type').valid && treatmentForm.get('type').touched}">
+            <option *ngIf="!newTreatment" [defaultSelected]="treatment.type">{{treatment.type}}</option>
+            <option *ngFor="let treatmentType of treatmentTypes">{{treatmentType}}</option>
+          </select>
+        </div>
+      </div>
+      <div formGroupName="dateOfTreatment" class="form-group row mb-0">
+        <label class="col-md-2 col-form-label input-group-text" for="dateOfTreatment">Tijdstip</label>
+        <div class="col-md-4 p-0">
+          <input class="form-control bg-white"
+                 id="dateOfTreatment"
+                 type="date"
+                 placeholder="Date"
+                 formControlName="date"
+                 [ngClass]="{'is-invalid': !treatmentForm.get('dateOfTreatment').valid && treatmentForm.get('dateOfTreatment').touched}">
+        </div>
+        <div class="col-md-4 p-0">
+          <input class="form-control bg-white"
+                 id="timeOfTreatment"
+                 type="time"
+                 placeholder="Tijdstip"
+                 formControlName="time"
+                 [ngClass]="{'is-invalid': !treatmentForm.get('dateOfTreatment').valid && treatmentForm.get('dateOfTreatment').touched}">
+        </div>
+      </div>
+      <div class="form-group row mb-0">
+        <label class="col-md-2 col-form-label input-group-text" for="description">Beschrijving</label>
+        <div class="col-md-8 p-0 m-0">
+          <textarea class="form-control bg-white p-0 m-0"
+                    id="description"
+                    type="text"
+                    placeholder="Beschrijving"
+                    formControlName="description"
+                    [ngClass]="{'is-invalid': !treatmentForm.get('description').valid && treatmentForm.get('description').touched}">
+          </textarea>
+        </div>
+      </div>
+      <div class="form-group row  mb-0">
+        <label class="col-md-2 col-form-label input-group-text" for="treatmentTypeId">Status</label>
+        <div class="col-md-8 p-0">
+          <select class="form-control bg-white" id="status" formControlName="status"
+                  [ngClass]="{'is-invalid': !treatmentForm.get('status').valid && treatmentForm.get('status').touched}">
+            <option *ngIf="!newTreatment" [defaultSelected]="treatment.status">{{treatment.status}}</option>
+            <option *ngFor="let status of statusTypes">{{status}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row mb-2">
+        <div class="offset-md-2 col-md-4">
+          <button class="btn btn-primary mr-3"
+                  style="width:80px;"
+                  type="submit"
+                  [disabled]="!treatmentForm.valid">
+            Save
+          </button>
+          <button class="btn btn-outline-secondary mr-3"
+                  style="width:80px;"
+                  type="button"
+                  title="Cancel your edits"
+                  (click)="cancelTreatment()">
+            Cancel
+          </button>
+          <button *ngIf="!newTreatment" class="btn btn-outline-warning"
+                  style="width:80px"
+                  type="button"
+                  title="Delete this product"
+                  (click)="deleteTreatment()">
+            Delete
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

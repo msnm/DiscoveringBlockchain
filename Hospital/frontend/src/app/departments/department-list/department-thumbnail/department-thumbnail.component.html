@@ -1,0 +1,7 @@
+  <div class="card text-center" [routerLink]="['/departments', department.id]">
+    <img [src]="department.imgUrl" class="card-img-bottom rounded" [alt]="department.name">
+    <div class="card-body rounded">
+        <h5 class="card-title">{{department.name}} </h5>
+        <a  [routerLink]="['/departments', department.id]" class="btn btn-primary">Open</a>
+      </div>
+  </div>

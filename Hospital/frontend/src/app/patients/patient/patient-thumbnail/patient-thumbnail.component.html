@@ -1,0 +1,57 @@
+<div *ngIf="patient">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngIf="this.settingsService.getSetting().namePatient">
+      <div class="container flex-wrap">
+        <div class="row">
+          <button type="button" class="btn col" (click)="isCollapsedPatient = !isCollapsedPatient"
+                  [attr.aria-expanded]="!isCollapsedPatient" aria-controls="collapsePatientInfo">
+            <div class="row">
+              <div class="col-md-2">
+                <i class="fa fa-info-circle"></i>
+              </div>
+              <div class="col-md-10 text-left">
+                {{patient.firstName}} {{patient.lastName}}
+              </div>
+            </div>
+          </button>
+        </div>
+        <div id="collapsePatientInfo" class="row justify-content-end" [ngbCollapse]="!isCollapsedPatient">
+          <div class="col-md-5">
+            <i *ngIf="patient.sex==='M'" class="fa fa-mars"></i>
+            <i *ngIf="patient.sex==='F'" class="fa fa-venus"></i>
+          </div>
+          <div class="col-md-5">
+            {{patient.birthDate | date : 'LL-MM-yyyy'}}
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item" *ngIf="this.settingsService.getSetting().treatmentType">
+      <div class="container">
+        <div class="row">
+          <button type="button" class="btn col" (click)="isCollapsedTreatment = !isCollapsedTreatment"
+                  [attr.aria-expanded]="!isCollapsedTreatment" aria-controls="collapseTreatmentInfo">
+            <div class="row">
+              <div class="col-md-2">
+                <i class="fa fa-info-circle"></i>
+              </div>
+              <div class="col-md-10 text-left">
+                Volgende behandeling
+              </div>
+            </div>
+          </button>
+        </div>
+        <div id="collapseTreatmentInfo" class="row justify-content-end" [ngbCollapse]="!isCollapsedTreatment">
+          <div class="col-md-5">
+            {{nextTreatment.type}}
+          </div>
+          <div class="col-md-5">
+            {{nextTreatment.dateOfTreatment | date: 'hh'}}
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <button class="btn btn-primary mt-2" [routerLink]="['/patients', patient.id]">Open <i class="fa fa-table"></i>
+  </button>
+</div>

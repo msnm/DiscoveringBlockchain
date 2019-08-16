@@ -1,0 +1,196 @@
+<div class="container">
+  <!-- Main first row -->
+  <div class="row">
+    <div class="col">
+      <h2> Medische fiche patient {{patient.id}}</h2>
+    </div>
+  </div>
+
+  <!-- Main second row -->
+  <div class="row">
+    <div class="container col-md-6">
+      <div class="card">
+        <!-- Header -->
+        <div class="card-header">
+          <div class="row justify-content-between">
+            <div class="col-md-10 card-title">
+              <h6>Medische gegevens</h6>
+            </div>
+            <div class="col-md-2">
+              <button class="btn"><i class="fa fa-sliders"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- Form -->
+        <div class="card-body p-0">
+          <form [formGroup]="">
+            <div class="row">
+              <div class="col">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Patiëntnummer</span>
+                  </div>
+                  <input disabled type="text" aria-label="PatientId" [defaultValue]="patient.id"
+                         class="form-control bg-white">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Afdeling</span>
+                  </div>
+                  <select aria-label="Department" class="form-control bg-white">
+                    <option disabled *ngFor="let dep of departments" [defaultSelected]="patient.department.id===dep.id"
+                            [value]="dep.name">{{dep.name}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Room</span>
+                  </div>
+                  <select aria-label="Room" class="form-control bg-white">
+                    <option disabled *ngFor="let room of patient.department.rooms"
+                            [defaultSelected]="patient.room.roomNumber===room.roomNumber"
+                            [value]="room.roomNumber">{{room.roomNumber}}</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Opnamedatum</span>
+                  </div>
+                  <input disabled type="date" aria-label="Admission"
+                         [defaultValue]="patient.hospitalizationInfo.admission | date: 'yyyy-MM-dd'" class="form-control bg-white">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Reden opname</span>
+                  </div>
+                  <textarea disabled aria-label="Reason hospitalization"
+                            class="form-control bg-white">{{patient.hospitalizationInfo.reason}}</textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Geplande ontslagdatum</span>
+                  </div>
+                  <input disabled type="date" aria-label="Resignation date"
+                         [defaultValue]="patient.hospitalizationInfo.plannedResignation | date: 'yyyy-MM-dd'" class="form-control bg-white">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- PERSOONLIJKE GEGEVENS -->
+    <div class="container col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <div class="row justify-content-between">
+            <div class="col-md-10 card-title">
+              <h6>Persoonlijke gegevens</h6>
+            </div>
+            <div class="col-md-2">
+              <button class="btn"><i class="fa fa-sliders"></i></button>
+            </div>
+
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <form [formGroup]="">
+            <div class="row">
+              <div class="col">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Voor en achternaam</span>
+                  </div>
+                  <input disabled type="text" aria-label="First name" [defaultValue]="patient.firstName"
+                         class="form-control bg-white">
+                  <input disabled type="text" aria-label="Last name" [defaultValue]="patient.lastName"
+                         class="form-control bg-white">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Geboortedatum</span>
+                  </div>
+                  <input disabled type="date" aria-label="BirthDate" [defaultValue]="patient.birthDate | date: 'yyyy-MM-dd'"
+                         class="form-control bg-white">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Geslacht</span>
+                  </div>
+                  <input disabled type="text" aria-label="Sex" [defaultValue]="patient.sex"
+                         class="form-control bg-white">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Vegetarisch</span>
+                  </div>
+                  <input disabled type="text" aria-label="Vegetarian" [defaultValue]="patient.food"
+                         class="form-control bg-white">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main third row -->
+
+
+  <!-- Main fourth row -->
+  <div class="row">
+    <div class="container">
+      <div class="row pt-5">
+        <h6>Behandelingen</h6>
+      </div>
+      <div class="row justify-content-start">
+        <button (click)="sortStatus()" class="btn col-md-1 p-0">Status</button>
+
+        <button (click)="sortType()"  class="btn col-md-2 p-0">Type behandeling</button>
+        <button (click)="sortDate()"  class="btn col-md-3 p-0">Uit te voeren op</button>
+        <button (click)="sortDescription()"  class="btn col-md-3 p-0">Beschrijving</button>
+        <button (click)="toggleAddPatient()" class="btn col-md-3 p-0">Toevoegen behandeling <i class="fa fa-plus-square"></i></button>
+      </div>
+      <div class="row">
+        <ul class="list-group col">
+          <app-treatment *ngIf="this.addPatient" [newTreatment]="true" (treatmentChanged)="treatmentChanged($event)"></app-treatment>
+          <li *ngFor="let treatment of patient.treatments"
+              class="list-group-item justify-content-between align-items-center p-0">
+            <app-treatment (treatmentChanged)="treatmentChanged($event)" [treatment]="treatment"></app-treatment>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

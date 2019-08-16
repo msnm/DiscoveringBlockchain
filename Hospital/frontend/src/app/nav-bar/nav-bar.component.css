@@ -1,0 +1,13 @@
+#navbarNav {
+  justify-content: space-between;
+}
+
+.btn, form input {
+  color: #015ABD;
+}
+.btn-outline, form input {
+  border-color: #015ABD;
+}
+
+
+

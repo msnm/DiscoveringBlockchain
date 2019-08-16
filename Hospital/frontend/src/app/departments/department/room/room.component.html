@@ -1,0 +1,33 @@
+<div class="card mb-2">
+  <div class="card-header">
+    <div class="container align-items-center">
+      <div class="row ">
+        <div class="col-md-3"><span class="badge text-right" [ngClass]="{'badge-success' : this.roomStatus === 'ok', 'badge-info': this.roomStatus ==='empty', 'badge-warning': this.roomStatus ==='treatment'}" >{{this.roomStatus}}</span></div>
+        <div class="col-md-9">
+          <ul class="nav nav-tabs card-header-tabs">
+            <div  *ngFor="let patient of patients">
+              <li class="nav-item">
+                <a class="nav-link" (click)=changeActivePatient(patient) [ngClass]="{'active': patient === patientActive}">{{patient.id}}</a>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <app-patient-thumbnail [patient]="patientActive"></app-patient-thumbnail>
+  </div>
+  <div class="card-footer text-muted">
+    <ul class="list-group list-group-horizontal-md">
+      <li  *ngIf="this.settingsService.setting.roomNumber" class="list-inline-item">{{room.roomNumber}}</li>
+      <div *ngIf="this.settingsService.setting.icons">
+        <li *ngIf="room.baby==true" class="list-inline-item"><i class="fa fa-child"></i></li>
+        <li *ngIf="room.saloon==true" class="list-inline-item"><i class="fa fa-coffee"></i></li>
+        <li *ngIf="room.shower==true" class="list-inline-item"><i class="fa fa-shower"></i></li>
+        <li *ngIf="room.bath==true" class="list-inline-item"><i class="fa fa-bath"></i></li>
+      </div>
+
+    </ul>
+  </div>
+</div>
