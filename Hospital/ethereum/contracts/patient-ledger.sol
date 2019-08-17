@@ -123,7 +123,7 @@ contract Hospital {
         require(patientId <= patientIds.length - 1);
         address patientAddress = patientIds[patientId];
         require(patientStructs[patientAddress].treatmentCount >= treatmentId + 1);
-        return  (patientStructs[patientAddress].treatmentStructs[id].id, patientStructs[patientAddress].treatmentStructs[id].typeOfTreatment, patientStructs[patientAddress].treatmentStructs[id].description, patientStructs[patientAddress].treatmentStructs[id].date, patientStructs[patientAddress].treatmentStructs[id].status);
+        return  (patientStructs[patientAddress].treatmentStructs[treatmentId].id, patientStructs[patientAddress].treatmentStructs[treatmentId].typeOfTreatment, patientStructs[patientAddress].treatmentStructs[treatmentId].description, patientStructs[patientAddress].treatmentStructs[treatmentId].date, patientStructs[patientAddress].treatmentStructs[treatmentId].status);
     }
 
     //Bij ziekenhuisopname moet de behandeling kunnen aangepast worden.

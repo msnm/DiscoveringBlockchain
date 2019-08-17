@@ -1,6 +1,8 @@
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const  Web3 = require('web3');
 const compiledPatientLedger = require('./build/Hospital.json');
+const fs = require('fs');
+const path = require('path');
 
 const provider = new HDWalletProvider(
     'siren sunset host obvious indicate opinion gospel fragile very rain soda ugly',
@@ -18,6 +20,13 @@ const deploy = async () => {
         .send({from: accounts[0]}); //Specify the sender/creator of the contract by selecting an account and setting the max amount of gas.
 
     console.log('The contract is deployed on: ', result.options.address);
+    const address = {
+        address: result.options.address,
+        network: 'https://rinkeby.infura.io/v3/35a6501a30564b129196b279a6111ce6',
+        owner: accounts[0]
+    };
+
+    fs.writeFileSync(path.resolve(__dirname, "result.json"), JSON.stringify(address));
 };
 
 deploy();

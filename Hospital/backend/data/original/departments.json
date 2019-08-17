@@ -1,0 +1,1412 @@
+[
+  {
+    "id": 1,
+    "code": "MTN",
+    "name": "Materniteit",
+    "imgUrl": "/assets/images/materniteit.jpg",
+    "rooms": [
+      {
+        "roomNumber": 101,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 1,
+            "patientId": 11001
+          },
+          {
+            "id": 2,
+            "patientId": 11002
+          }
+        ]
+      },
+      {
+        "roomNumber": 102,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 3,
+            "patientId": 11003
+          },
+          {
+            "id": 4,
+            "patientId": 11004
+          }
+        ]
+      },
+      {
+        "roomNumber": 103,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": []
+      },
+      {
+        "roomNumber": 104,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 6,
+            "patientId": 11005
+          },
+          {
+            "id": 7,
+            "patientId": 11006
+          }
+        ]
+      },
+      {
+        "roomNumber": 105,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 8,
+            "patientId": 11007
+          },
+          {
+            "id": 9,
+            "patientId": 11008
+          }
+        ]
+      },
+      {
+        "roomNumber": 106,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 10,
+            "patientId": 11009
+          }
+        ]
+      },
+      {
+        "roomNumber": 107,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 11,
+            "patientId": 11010
+          },
+          {
+            "id": 12,
+            "patientId": 11011
+          }
+        ]
+      },
+      {
+        "roomNumber": 108,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 13,
+            "patientId": 11012
+          },
+          {
+            "id": 14,
+            "patientId": 11013
+          }
+        ]
+      },
+      {
+        "roomNumber": 109,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 15,
+            "patientId": 11014
+          }
+        ]
+      },
+      {
+        "roomNumber": 110,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 16,
+            "patientId": 11015
+          },
+          {
+            "id": 17,
+            "patientId": 11016
+          }
+        ]
+      },
+      {
+        "roomNumber": 111,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 18,
+            "patientId": 11017
+          },
+          {
+            "id": 19,
+            "patientId": 11018
+          }
+        ]
+      },
+      {
+        "roomNumber": 112,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 20,
+            "patientId": 11019
+          },
+          {
+            "id": 21,
+            "patientId": 11020
+          },
+          {
+            "id": 22,
+            "patientId": 11021
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "code": "KND",
+    "name": "Kinderafdeling",
+    "imgUrl": "/assets/images/kinderafdeling.jpg",
+    "rooms": [
+      {
+        "roomNumber": 201,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 1,
+            "patientId": 12001
+          },
+          {
+            "id": 2,
+            "patientId": 12002
+          }
+        ]
+      },
+      {
+        "roomNumber": 202,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 3,
+            "patientId": 12003
+          },
+          {
+            "id": 4,
+            "patientId": 12004
+          }
+        ]
+      },
+      {
+        "roomNumber": 203,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": []
+      },
+      {
+        "roomNumber": 204,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 6,
+            "patientId": 12005
+          },
+          {
+            "id": 7,
+            "patientId": 12006
+          }
+        ]
+      },
+      {
+        "roomNumber": 205,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 8,
+            "patientId": 12007
+          },
+          {
+            "id": 9,
+            "patientId": 12008
+          }
+        ]
+      },
+      {
+        "roomNumber": 206,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 10,
+            "patientId": 12009
+          }
+        ]
+      },
+      {
+        "roomNumber": 207,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 11,
+            "patientId": 12010
+          },
+          {
+            "id": 12,
+            "patientId": 12011
+          }
+        ]
+      },
+      {
+        "roomNumber": 208,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 13,
+            "patientId": 12012
+          },
+          {
+            "id": 14,
+            "patientId": 12013
+          }
+        ]
+      },
+      {
+        "roomNumber": 209,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 15,
+            "patientId": 12014
+          }
+        ]
+      },
+      {
+        "roomNumber": 210,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 16,
+            "patientId": 12015
+          },
+          {
+            "id": 17,
+            "patientId": 12016
+          }
+        ]
+      },
+      {
+        "roomNumber": 211,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 18,
+            "patientId": 12017
+          },
+          {
+            "id": 19,
+            "patientId": 12018
+          }
+        ]
+      },
+      {
+        "roomNumber": 212,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 20,
+            "patientId": 12019
+          },
+          {
+            "id": 21,
+            "patientId": 12020
+          },
+          {
+            "id": 22,
+            "patientId": 12021
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "code": "PLZ",
+    "name": "Palliatieve zorg",
+    "imgUrl": "/assets/images/palliatieve.jpg",
+    "rooms": [
+      {
+        "roomNumber": 301,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 1,
+            "patientId": 13001
+          },
+          {
+            "id": 2,
+            "patientId": 13002
+          }
+        ]
+      },
+      {
+        "roomNumber": 302,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 3,
+            "patientId": 13003
+          },
+          {
+            "id": 4,
+            "patientId": 13004
+          }
+        ]
+      },
+      {
+        "roomNumber": 303,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": []
+      },
+      {
+        "roomNumber": 304,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 6,
+            "patientId": 13005
+          },
+          {
+            "id": 7,
+            "patientId": 13006
+          }
+        ]
+      },
+      {
+        "roomNumber": 305,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 8,
+            "patientId": 13007
+          },
+          {
+            "id": 9,
+            "patientId": 13008
+          }
+        ]
+      },
+      {
+        "roomNumber": 306,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 10,
+            "patientId": 13009
+          }
+        ]
+      },
+      {
+        "roomNumber": 307,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 11,
+            "patientId": 13010
+          },
+          {
+            "id": 12,
+            "patientId": 13011
+          }
+        ]
+      },
+      {
+        "roomNumber": 308,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 13,
+            "patientId": 13012
+          },
+          {
+            "id": 14,
+            "patientId": 13013
+          }
+        ]
+      },
+      {
+        "roomNumber": 309,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 15,
+            "patientId": 13014
+          }
+        ]
+      },
+      {
+        "roomNumber": 310,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 16,
+            "patientId": 13015
+          },
+          {
+            "id": 17,
+            "patientId": 13016
+          }
+        ]
+      },
+      {
+        "roomNumber": 311,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 18,
+            "patientId": 13017
+          },
+          {
+            "id": 19,
+            "patientId": 13018
+          }
+        ]
+      },
+      {
+        "roomNumber": 312,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 20,
+            "patientId": 13019
+          },
+          {
+            "id": 21,
+            "patientId": 13020
+          },
+          {
+            "id": 22,
+            "patientId": 13021
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "code": "ITZ",
+    "name": "Intensieve zorg",
+    "imgUrl": "/assets/images/intensieve.jpg",
+    "rooms": [
+      {
+        "roomNumber": 401,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 1,
+            "patientId": 14001
+          },
+          {
+            "id": 2,
+            "patientId": 14002
+          }
+        ]
+      },
+      {
+        "roomNumber": 402,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 3,
+            "patientId": 14003
+          },
+          {
+            "id": 4,
+            "patientId": 14004
+          }
+        ]
+      },
+      {
+        "roomNumber": 403,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": []
+      },
+      {
+        "roomNumber": 404,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 6,
+            "patientId": 14005
+          },
+          {
+            "id": 7,
+            "patientId": 14006
+          }
+        ]
+      },
+      {
+        "roomNumber": 405,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 8,
+            "patientId": 14007
+          },
+          {
+            "id": 9,
+            "patientId": 14008
+          }
+        ]
+      },
+      {
+        "roomNumber": 406,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 10,
+            "patientId": 14009
+          }
+        ]
+      },
+      {
+        "roomNumber": 407,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 11,
+            "patientId": 14010
+          },
+          {
+            "id": 12,
+            "patientId": 14011
+          }
+        ]
+      },
+      {
+        "roomNumber": 408,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 13,
+            "patientId": 14012
+          },
+          {
+            "id": 14,
+            "patientId": 14013
+          }
+        ]
+      },
+      {
+        "roomNumber": 409,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 15,
+            "patientId": 14014
+          }
+        ]
+      },
+      {
+        "roomNumber": 410,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 16,
+            "patientId": 14015
+          },
+          {
+            "id": 17,
+            "patientId": 14016
+          }
+        ]
+      },
+      {
+        "roomNumber": 411,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 18,
+            "patientId": 14017
+          },
+          {
+            "id": 19,
+            "patientId": 14018
+          }
+        ]
+      },
+      {
+        "roomNumber": 412,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 20,
+            "patientId": 14019
+          },
+          {
+            "id": 21,
+            "patientId": 14020
+          },
+          {
+            "id": 22,
+            "patientId": 14021
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "code": "CCU",
+    "name": "Beroertezorg",
+    "imgUrl": "/assets/images/beroertezorg.jpg",
+    "rooms": [
+      {
+        "roomNumber": 501,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 1,
+            "patientId": 15001
+          },
+          {
+            "id": 2,
+            "patientId": 15002
+          }
+        ]
+      },
+      {
+        "roomNumber": 502,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 3,
+            "patientId": 15003
+          },
+          {
+            "id": 4,
+            "patientId": 15004
+          }
+        ]
+      },
+      {
+        "roomNumber": 503,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": []
+      },
+      {
+        "roomNumber": 504,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 6,
+            "patientId": 15005
+          },
+          {
+            "id": 7,
+            "patientId": 15006
+          }
+        ]
+      },
+      {
+        "roomNumber": 505,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 8,
+            "patientId": 15007
+          },
+          {
+            "id": 9,
+            "patientId": 15008
+          }
+        ]
+      },
+      {
+        "roomNumber": 506,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 10,
+            "patientId": 15009
+          }
+        ]
+      },
+      {
+        "roomNumber": 507,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 11,
+            "patientId": 15010
+          },
+          {
+            "id": 12,
+            "patientId": 15011
+          }
+        ]
+      },
+      {
+        "roomNumber": 508,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 13,
+            "patientId": 15012
+          },
+          {
+            "id": 14,
+            "patientId": 15013
+          }
+        ]
+      },
+      {
+        "roomNumber": 509,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 15,
+            "patientId": 15014
+          }
+        ]
+      },
+      {
+        "roomNumber": 510,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 16,
+            "patientId": 15015
+          },
+          {
+            "id": 17,
+            "patientId": 15016
+          }
+        ]
+      },
+      {
+        "roomNumber": 511,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 18,
+            "patientId": 15017
+          },
+          {
+            "id": 19,
+            "patientId": 15018
+          }
+        ]
+      },
+      {
+        "roomNumber": 512,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 20,
+            "patientId": 15019
+          },
+          {
+            "id": 21,
+            "patientId": 15020
+          },
+          {
+            "id": 22,
+            "patientId": 15021
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "code": "GRT",
+    "name": "Geriatrie",
+    "imgUrl": "/assets/images/geriatrie.jpg",
+    "rooms": [
+      {
+        "roomNumber": 601,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 1,
+            "patientId": 16001
+          },
+          {
+            "id": 2,
+            "patientId": 16002
+          }
+        ]
+      },
+      {
+        "roomNumber": 602,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 3,
+            "patientId": 16002
+          },
+          {
+            "id": 4,
+            "patientId": 16003
+          }
+        ]
+      },
+      {
+        "roomNumber": 603,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": []
+      },
+      {
+        "roomNumber": 604,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 6,
+            "patientId": 16005
+          },
+          {
+            "id": 7,
+            "patientId": 16006
+          }
+        ]
+      },
+      {
+        "roomNumber": 605,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 8,
+            "patientId": 16007
+          },
+          {
+            "id": 9,
+            "patientId": 16008
+          }
+        ]
+      },
+      {
+        "roomNumber": 606,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 10,
+            "patientId": 16009
+          }
+        ]
+      },
+      {
+        "roomNumber": 607,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 11,
+            "patientId": 16010
+          },
+          {
+            "id": 12,
+            "patientId": 16011
+          }
+        ]
+      },
+      {
+        "roomNumber": 608,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 13,
+            "patientId": 16012
+          },
+          {
+            "id": 14,
+            "patientId": 16013
+          }
+        ]
+      },
+      {
+        "roomNumber": 609,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 15,
+            "patientId": 16014
+          }
+        ]
+      },
+      {
+        "roomNumber": 610,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 16,
+            "patientId": 16015
+          },
+          {
+            "id": 17,
+            "patientId": 16016
+          }
+        ]
+      },
+      {
+        "roomNumber": 611,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 18,
+            "patientId": 16017
+          },
+          {
+            "id": 19,
+            "patientId": 16018
+          }
+        ]
+      },
+      {
+        "roomNumber": 612,
+        "width": 3.5,
+        "length": 7,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": true,
+        "beds": [
+          {
+            "id": 20,
+            "patientId": 16019
+          },
+          {
+            "id": 21,
+            "patientId": 16020
+          },
+          {
+            "id": 22,
+            "patientId": 16021
+          }
+        ]
+      }
+    ]
+  }
+]

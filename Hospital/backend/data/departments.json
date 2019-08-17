@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "code": "MTN",
+    "name": "Materniteit",
+    "imgUrl": "/assets/images/materniteit.jpg",
+    "rooms": [
+      {
+        "roomNumber": 101,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": true,
+        "bath": false,
+        "saloon": false,
+        "baby": false,
+        "beds": [
+          {
+            "id": 0,
+            "patientId": 0
+          }
+        ]
+      },
+      {
+        "roomNumber": 102,
+        "width": 3.5,
+        "length": 5,
+        "toilet": true,
+        "shower": false,
+        "bath": true,
+        "saloon": true,
+        "baby": false,
+        "beds": [
+          {
+            "id": 1,
+            "patientId": 1
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -42,6 +42,7 @@ describe('PatientLedger', () => {
 
         const patientCount = await patientLedger.methods.getPatientCount().call();
         const patientMethod1 = await patientLedger.methods.getPatientByAddress(accounts[1]).call();
+        console.log(patientMethod1);
         assert.equal(patientCount, 1);
         assert.equal('Michael', patientMethod1.firstName);
 
@@ -92,10 +93,9 @@ describe('PatientLedger', () => {
     });
 
     it('Test count of patients and treatments', async () => {
-        await patientLedger.methods
+        const patient = await patientLedger.methods
             .insertPatient('Michael', 'Schoenmaekers', 'CARNIVORE', new Date('1994/02/01').getTime())
             .send({ from: accounts[1], gas: '2000000'});
-
         await patientLedger.methods
             .insertTreatment(0, 'WONDEN', 'ABC', new Date().getTime(), 'ToDo')
             .send({ from: accounts[0], gas: '2000000'});

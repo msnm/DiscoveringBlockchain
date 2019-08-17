@@ -22,9 +22,4 @@ export class NavBarComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.alive = false;
   }
-
-  enableProvider() {
-    console.log("click");
-    this.ethService.enableProvider();
-  }
 }

@@ -5,7 +5,6 @@
       <h2> Medische fiche patient {{patient.id}}</h2>
     </div>
   </div>
-
   <!-- Main second row -->
   <div class="row">
     <div class="container col-md-6">
@@ -42,7 +41,7 @@
                     <span class="input-group-text">Afdeling</span>
                   </div>
                   <select aria-label="Department" class="form-control bg-white">
-                    <option disabled *ngFor="let dep of departments" [defaultSelected]="patient.department.id===dep.id"
+                  <option  *ngFor="let dep of departments"
                             [value]="dep.name">{{dep.name}}</option>
                   </select>
                 </div>
@@ -53,9 +52,8 @@
                     <span class="input-group-text">Room</span>
                   </div>
                   <select aria-label="Room" class="form-control bg-white">
-                    <option disabled *ngFor="let room of patient.department.rooms"
-                            [defaultSelected]="patient.room.roomNumber===room.roomNumber"
-                            [value]="room.roomNumber">{{room.roomNumber}}</option>
+                    <option *ngFor="let room of patient.department.rooms"
+                            [value]="room.roomNumber">{{room.roomNumber}}</option>-->
                   </select>
                 </div>
               </div>
