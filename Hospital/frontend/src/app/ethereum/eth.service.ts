@@ -23,7 +23,7 @@ export class EthService {
 
    constructor(@Inject(WEB3) private web3: Web3) {
      this.contract = new this.web3.eth.Contract(JSON.parse(hospitalABI.interface), contractDetails.address);
-   //  this.test();
+    // this.initPatient();
    }
 
    getContract() : Contract {
@@ -31,13 +31,14 @@ export class EthService {
      return this.contract;
    }
 
-  async test() {
+  async initPatient() {
      try {
        const director = await this.getContract().methods.director().call();
        console.log('This is the director of the hospital', director);
        const patientCount = await this.getContract().methods.getPatientCount().call();
        console.log('The patientCount is', patientCount);
-       const patient = await this.getContract().methods.getPatientById(0).call();
+       const insertPatient = await this.insertPatient();
+       const insertHosp =  await this.insertHospitalization();
      }
      catch(err) {
        console.log('Oeps something went wrong:', err);
@@ -155,33 +156,18 @@ export class EthService {
 
   //test function to create patients. Not used in UI!
   async insertPatient() {
-    const patient = await this.contract.methods.insertPatient('Michael', 'Schoenmaekers', 'CARNIVORE', new Date('1994/02/01').getTime())
-      .send({ from: contractDetails.owner, gas: '2000000'});
+    console.log('insertPatient');
+    const patient = await this.getContract().methods.insertPatient('Michael', 'Schoenmaekers', 'CARNIVORE', new Date('1994/01/02').getTime())
+      .send({ from: contractDetails.owner, gas: '3000000'});
     console.log(patient);
   }
   async insertHospitalization() {
-    const hosp = await this.contract.methods
+    console.log('insertHospitalization');
+    const hosp = await this.getContract().methods
       .insertHospitalization(0, new Date().getTime(), 'Gebroken been', new Date().getTime())
-      .send({ from: contractDetails.owner, gas: '2000000'});
-
+      .send({ from: contractDetails.owner, gas: '3000000'});
     console.log(hosp);
   }
-
-
-  /**
-   *
-   Result {
-  '0': 'Michael',
-  '1': 'Schoenmaekers',
-  '2': 'CARNIVORE',
-  '3': '760057200000',
-  '4': '0',
-  firstName: 'Michael',
-  lastName: 'Schoenmaekers',
-  foodPreference: 'CARNIVORE',
-  birthDate: '760057200000',
-  id: '0' }
-   */
 }
 
 

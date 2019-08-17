@@ -116,7 +116,7 @@ contract Hospital {
     function getTreatmentByAddress(address patientAddress, uint treatmentId)  public view returns (uint id, string typeOfTreatment, string description, uint date, string status) {
         require(patientIds[patientStructs[patientAddress].id] == patientAddress);
         require(patientStructs[patientAddress].treatmentCount >= treatmentId + 1);
-        return  (patientStructs[patientAddress].treatmentStructs[id].id, patientStructs[patientAddress].treatmentStructs[id].typeOfTreatment, patientStructs[patientAddress].treatmentStructs[id].description, patientStructs[patientAddress].treatmentStructs[id].date, patientStructs[patientAddress].treatmentStructs[id].status);
+        return  (patientStructs[patientAddress].treatmentStructs[treatmentId].id, patientStructs[patientAddress].treatmentStructs[treatmentId].typeOfTreatment, patientStructs[patientAddress].treatmentStructs[treatmentId].description, patientStructs[patientAddress].treatmentStructs[treatmentId].date, patientStructs[patientAddress].treatmentStructs[treatmentId].status);
     }
 
     function getTreatmentById(uint patientId, uint treatmentId) restrictedToNurse public view returns (uint id, string typeOfTreatment, string description, uint date, string status) {
