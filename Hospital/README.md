@@ -1,4 +1,5 @@
-#HospitalApp with ethereum intgegration
+# HospitalApp with ethereum intgegration
+
 The app should represent a hospital with its departments and its patients. 
 The end-user (a nurse) has an overview of all the rooms with its patients. Each room also has a thumbnail, which 
 states the name + which treatment is requirement within n hours. 
