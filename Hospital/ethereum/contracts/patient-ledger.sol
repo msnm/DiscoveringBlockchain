@@ -146,8 +146,14 @@ contract Hospital {
     }
 
     // Nodig om in de UI te kunnen lopen
-    function getTreatmentCount(address patientAddress) public constant returns (uint) {
+    function getTreatmentCountByAddress(address patientAddress) public constant returns (uint) {
         require(patientIds[patientStructs[patientAddress].id] == patientAddress);
+        return patientStructs[patientAddress].treatmentCount;
+    }
+
+    function getTreatmentCountById(uint patientId) public constant returns (uint) {
+        require(patientId <= patientIds.length -1);
+        address patientAddress = patientIds[patientId];
         return patientStructs[patientAddress].treatmentCount;
     }
 

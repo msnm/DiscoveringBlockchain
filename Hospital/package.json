@@ -4,7 +4,7 @@
   "description": "First DAPP",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout 10000"
+    "test": "mocha --timeout 20000"
   },
   "author": "msnm",
   "license": "ISC",

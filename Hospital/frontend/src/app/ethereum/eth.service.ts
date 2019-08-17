@@ -5,12 +5,22 @@ import {fromPromise} from "rxjs/internal-compatibility";
 import {Observable, of} from "rxjs";
 import {catchError, map, tap} from "rxjs/operators";
 
+declare let require: any;
+const hospitalABI = require('../../../ethereum/build/Hospital.json');
+const contractAddresss = '1234';
 @Injectable({
   providedIn: 'root'
 })
 export class EthService {
 
   constructor(@Inject(WEB3) private web3: Web3) { }
+  
+  private contract: any; 
+  /** Create local instance of the contract **/
+  
+  private getContract() {
+    this.web3.eth.Contract(hospitalABI, contractAddresss);
+  }
 
   /** Return the list of accounts available */
   public getAccounts(): Observable<string[]> {
@@ -31,6 +41,9 @@ export class EthService {
         catchError((err: Error) => of(err))
       );
     }
+  }
+
+  public getPatient(id: number) {
   }
 
   public enableProvider() {

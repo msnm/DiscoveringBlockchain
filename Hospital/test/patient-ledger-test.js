@@ -31,12 +31,8 @@ describe('PatientLedger', () => {
     it('Has a director and nurse', async () => {
         const director = await patientLedger.methods.director().call();
         const isNurse = await patientLedger.methods.nursesMap(accounts[0]).call();
-        //const nurse = await patientLedger.methods.nursesAccounts(0).call();
-        //const nursesCount = await patientLedger.methods.getNursesCount().call();
         assert.equal(accounts[0], director);
         assert(isNurse);
-        //assert.equal(nurse, accounts[0] );
-        //assert.equal(nursesCount, 1);
     });
 
     it('Create a patient and update name', async () => {
@@ -93,6 +89,48 @@ describe('PatientLedger', () => {
 
         treatment = await patientLedger.methods.getTreatmentByAddress(accounts[1], 0).call();
         assert.equal(status, treatment.status);
+    });
+
+    it('Test count of patients and treatments', async () => {
+        await patientLedger.methods
+            .insertPatient('Michael', 'Schoenmaekers', 'CARNIVORE', new Date('1994/02/01').getTime())
+            .send({ from: accounts[1], gas: '2000000'});
+
+        await patientLedger.methods
+            .insertTreatment(0, 'WONDEN', 'ABC', new Date().getTime(), 'ToDo')
+            .send({ from: accounts[0], gas: '2000000'});
+
+        await patientLedger.methods
+            .insertPatient('Michael', 'Schoenmaekers', 'CARNIVORE', new Date('1994/02/01').getTime())
+            .send({ from: accounts[2], gas: '2000000'});
+
+        await patientLedger.methods
+            .insertTreatment(1, 'WONDEN', 'ABC', new Date().getTime(), 'ToDo')
+            .send({ from: accounts[0], gas: '2000000'});
+
+        await patientLedger.methods
+            .insertPatient('Michael', 'Schoenmaekers', 'CARNIVORE', new Date('1994/02/01').getTime())
+            .send({ from: accounts[3], gas: '2000000'});
+
+        await patientLedger.methods
+            .insertTreatment(2, 'WONDEN', 'ABC', new Date().getTime(), 'ToDo')
+            .send({ from: accounts[0], gas: '2000000'});
+
+        await patientLedger.methods
+            .insertTreatment(2, 'WASSEN', 'ABC', new Date().getTime(), 'ToDo')
+            .send({ from: accounts[0], gas: '2000000'});
+
+        const patientCount = await patientLedger.methods.getPatientCount().call();
+
+        const patientTreatmentCount1 = await patientLedger.methods.getTreatmentCountByAddress(accounts[1]).call();
+        const patientTreatmentCount2 = await patientLedger.methods.getTreatmentCountByAddress(accounts[2]).call();
+        const patientTreatmentCount3 = await patientLedger.methods.getTreatmentCountById(2).call();
+
+        assert.equal(3, patientCount);
+        assert.equal(1, patientTreatmentCount1);
+        assert.equal(1, patientTreatmentCount2);
+        assert.equal(2, patientTreatmentCount3);
+
     });
 });
 
